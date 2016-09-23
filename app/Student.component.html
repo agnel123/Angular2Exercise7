@@ -1,0 +1,14 @@
+<div>
+    <h1>{{title}}</h1>
+   
+ <ul class="heroes">
+      <li *ngFor="#student of studentInfo"  [class.selected]="student === selectedStudent" (click)="onSelect(student)">
+        <span class="badge">{{student.StudentID}}</span> {{student.StudentFName}}  </li>
+    </ul>
+
+ <my-student-detail [student]='selectedStudent' >
+
+ </my-student-detail>
+
+</div>
+
